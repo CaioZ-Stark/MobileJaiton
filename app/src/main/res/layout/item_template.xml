@@ -25,10 +25,17 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/item_endereco"
+                android:id="@+id/item_nomedoprojeto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Endereço:"
+                android:text="Nome do Projeto:"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/item_descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descrição do Projeto:"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 

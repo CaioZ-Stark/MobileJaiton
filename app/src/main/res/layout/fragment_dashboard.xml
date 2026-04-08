@@ -45,23 +45,36 @@
 
 
     <EditText
-        android:id="@+id/enderecoItemEditText"
+        android:id="@+id/nomedoprojetoItemEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Endereço"
+        android:hint="Nome do Projeto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_select_image" />
 
 
+    <EditText
+        android:id="@+id/descricaoItemEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:hint="Descrição"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_select_image" />
+
     <Button
         android:id="@+id/salvarItemButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
         android:text="Salvar"
-        app:layout_constraintTop_toBottomOf="@id/enderecoItemEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/descricaoItemEditText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
