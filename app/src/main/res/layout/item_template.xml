@@ -3,50 +3,46 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp">
+    android:padding="10dp"
+    android:gravity="center_horizontal">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
+    <!-- Imagem centralizada -->
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Nome do projeto -->
+    <TextView
+        android:id="@+id/item_nomedoprojeto"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:text="Nome do Projeto:"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:gravity="center"
+        android:layout_marginBottom="4dp" />
 
-        <ImageView
-            android:id="@+id/item_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:layout_marginEnd="8dp" />
+    <!-- Descrição -->
+    <TextView
+        android:id="@+id/item_descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição do Projeto:"
+        android:textSize="15sp"
+        android:textColor="#555555"
+        android:gravity="center" />
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/item_nomedoprojeto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nome do Projeto:"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-            <TextView
-                android:id="@+id/item_descricao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Descrição do Projeto:"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <!-- Campos futuros aqui -->
-        </LinearLayout>
-    </LinearLayout>
-
+    <!-- Linha divisória -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#CCCCCC"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"/>
+        android:background="#DDDDDD"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"/>
+
 </LinearLayout>

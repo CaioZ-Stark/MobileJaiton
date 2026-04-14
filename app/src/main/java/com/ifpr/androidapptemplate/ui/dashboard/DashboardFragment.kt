@@ -32,6 +32,7 @@ class DashboardFragment : Fragment() {
     private lateinit var nomedoprojetoEditText: EditText
 
     private lateinit var descricaoItemEditText: EditText
+
     private lateinit var itemImageView: ImageView
     private var imageUri: Uri? = null
 
@@ -124,11 +125,17 @@ class DashboardFragment : Fragment() {
                 val descricao = descricaoItemEditText.text.toString().trim()
                 //TODO("Capture aqui o conteudo que esta nos outros editTexts que foram criados")
 
-                val item = Item(nome, descricao, base64Image)
+                val item = Item(nome, descricao, base64Image=base64Image)
 
 
                 saveItemIntoDatabase(item)
             }
+        }else{
+            val nome = nomedoprojetoEditText.text.toString().trim()
+            val descricao = descricaoItemEditText.text.toString().trim()
+            //TODO("Capture aqui o conteudo que esta nos outros editTexts que foram criados")
+
+            val item = Item(nome, descricao, null)
         }
     }
 
