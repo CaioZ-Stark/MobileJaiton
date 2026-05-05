@@ -36,6 +36,22 @@
         android:textSize="15sp"
         android:textColor="#555555"
         android:gravity="center" />
+    <!-- Endereço -->
+    <TextView
+        android:id="@+id/item_endereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Endereço do Projeto:"
+        android:textSize="15sp"
+        android:textColor="#555555"
+        android:gravity="center" />
+
+    <!-- botão de ir para o projeto -->
+    <Button
+        android:id="@+id/btnRota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ir até aqui"/>
 
     <!-- Linha divisória -->
     <View

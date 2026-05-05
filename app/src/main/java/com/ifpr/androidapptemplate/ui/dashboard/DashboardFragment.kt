@@ -33,6 +33,8 @@ class DashboardFragment : Fragment() {
 
     private lateinit var descricaoItemEditText: EditText
 
+    private lateinit var enderecoItemText: EditText
+
     private lateinit var itemImageView: ImageView
     private var imageUri: Uri? = null
 
@@ -71,6 +73,7 @@ class DashboardFragment : Fragment() {
         selectImageButton = view.findViewById(R.id.button_select_image)
         nomedoprojetoEditText = view.findViewById(R.id.nomedoprojetoItemEditText)
         descricaoItemEditText = view.findViewById(R.id.descricaoItemEditText)
+        enderecoItemText = view.findViewById(R.id.registerEnderecoEditText)
         //TODO("Capture aqui os outro campos que foram inseridos no layout. Por exemplo, ate
         // o momento so foi capturado o endereco (EditText)")
 
@@ -103,8 +106,9 @@ class DashboardFragment : Fragment() {
         //TODO("Capture aqui o conteudo que esta nos outros editTexts que foram criados")
         val nomedoprojeto = nomedoprojetoEditText.text.toString().trim()
         val descricao = descricaoItemEditText.text.toString().trim()
+        val endereco = enderecoItemText.text.toString().trim()
 
-        if (nomedoprojeto.isEmpty() || imageUri == null || descricao.isEmpty()  ) {
+        if (nomedoprojeto.isEmpty() || imageUri == null || descricao.isEmpty()  || endereco.isEmpty() ) {
             Toast.makeText(context, "Por favor, preencha todos os campos", Toast.LENGTH_SHORT)
                 .show()
             return
@@ -123,9 +127,10 @@ class DashboardFragment : Fragment() {
                 val base64Image = Base64.encodeToString(bytes, Base64.DEFAULT)
                 val nome = nomedoprojetoEditText.text.toString().trim()
                 val descricao = descricaoItemEditText.text.toString().trim()
+                val endereco = enderecoItemText.text.toString().trim()
                 //TODO("Capture aqui o conteudo que esta nos outros editTexts que foram criados")
 
-                val item = Item(nome, descricao, base64Image=base64Image)
+                val item = Item(nome, descricao, endereco ,base64Image=base64Image)
 
 
                 saveItemIntoDatabase(item)
@@ -133,9 +138,11 @@ class DashboardFragment : Fragment() {
         }else{
             val nome = nomedoprojetoEditText.text.toString().trim()
             val descricao = descricaoItemEditText.text.toString().trim()
+            val endereco = enderecoItemText.text.toString().trim()
             //TODO("Capture aqui o conteudo que esta nos outros editTexts que foram criados")
 
-            val item = Item(nome, descricao, null)
+            val item = Item(nome, descricao, endereco,null)
+            saveItemIntoDatabase(item)
         }
     }
 
