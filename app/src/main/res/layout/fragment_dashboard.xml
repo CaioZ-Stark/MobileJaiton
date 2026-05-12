@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="#FBF7F7"
     tools:context=".ui.dashboard.DashboardFragment">
 
     <!-- Título -->
@@ -16,6 +17,7 @@
         android:text="Cadastro do Projeto"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="#000000"
         android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,8 +41,10 @@
         android:id="@+id/button_select_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selecionar Imagem"
         android:layout_marginTop="8dp"
+        android:text="Selecionar Imagem"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#F40B0B"
         app:layout_constraintTop_toBottomOf="@id/image_item"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -49,9 +53,11 @@
     <EditText
         android:id="@+id/nomedoprojetoItemEditText"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Nome do Projeto"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
+        android:hint="Nome do Projeto"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintTop_toBottomOf="@id/button_select_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -60,36 +66,41 @@
     <EditText
         android:id="@+id/descricaoItemEditText"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Descrição"
+        android:layout_height="48dp"
         android:layout_marginTop="12dp"
+        android:hint="Descrição"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintTop_toBottomOf="@id/nomedoprojetoItemEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
-    <!-- Botão salvar -->
-
+    <!-- Endereço -->
     <EditText
         android:id="@+id/registerEnderecoEditText"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
         android:hint="Endereço"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nomedoprojetoItemEditText" />
-
-    <Button
-        android:id="@+id/salvarItemButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Salvar"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/descricaoItemEditText" />
+
+    <!-- Botão salvar -->
+    <Button
+        android:id="@+id/salvarItemButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Salvar"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#F40B0B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerEnderecoEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
